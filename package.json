@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jordisabat/clean_react/issues"
   },
-  "homepage": "https://github.com/jordisabat/clean_react#readme"
+  "homepage": "https://github.com/jordisabat/clean_react#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
