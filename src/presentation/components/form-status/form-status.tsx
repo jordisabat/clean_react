@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/indent */
 import React from 'react'
 import Spinner from '../spinner/spinner'
 import Styles from './form-status-styles.scss'
