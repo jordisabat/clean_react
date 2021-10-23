@@ -21,10 +21,10 @@ const Input: React.FC<Props> = (props: Props) => {
     event.target.readOnly = false
   }
   const getStatus = (): string => {
-    return '🔴'
+    return error ? '🔴' : '🟢'
   }
   const getTitle = (): string => {
-    return error
+    return error || 'OK'
   }
   return (
     <div className={Styles.inputWrap}>
