@@ -14,14 +14,15 @@ type Props = {
 }
 
 const Login: React.FC<Props> = ({ validation }: Props) => {
-  const [state, setState] = useState({
+  const initialState = {
     isLoading: false,
     email: '',
     password: '',
     emailError: '',
     passwordError: '',
     mainError: ''
-  })
+  }
+  const [state, setState] = useState(initialState)
 
   useEffect(() => {
     setState({
