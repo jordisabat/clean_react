@@ -67,6 +67,8 @@
 * React Router
 * UseState
 * UseContext
+* UseEffect
+* Memo
 * Functional Components
 
 > ## Git Features
