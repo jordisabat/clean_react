@@ -34,6 +34,7 @@
 * TDD
 * Clean Architecture
 * DDD
+* Reactive Programming
 * Conventional Committees
 * GitFlow
 * Modular Design
@@ -57,6 +58,7 @@
 * Faker
 * Coveralls
 * React Hooks
+* React Router
 * Husky
 * Lint Staged
 * Eslint
@@ -64,10 +66,12 @@
 
 > ## React Features
 
+* React Testing Library
 * React Router
 * UseState
 * UseContext
 * UseEffect
+* UseHistory
 * Memo
 * Functional Components
 
