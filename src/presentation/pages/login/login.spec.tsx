@@ -128,17 +128,20 @@ describe('Login component', () => {
   })
 
   test('Should call Authencication with correct values', () => {
-    // arrange
     const { sut, authenticationSpy } = makeSut()
-
     const email = faker.internet.email()
     const password = faker.internet.password()
-    // act
     simulateValidSubmit(sut, email, password)
-    // assert
     expect(authenticationSpy.params).toEqual({
       email,
       password
     })
+  })
+
+  test('Should call Authencication only once', () => {
+    const { sut, authenticationSpy } = makeSut()
+    simulateValidSubmit(sut)
+    simulateValidSubmit(sut)
+    expect(authenticationSpy.callsCount).toBe(1)
   })
 })
