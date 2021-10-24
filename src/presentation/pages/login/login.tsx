@@ -38,11 +38,18 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
     event: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
     event.preventDefault()
-    if (state.isLoading || state.emailError || state.passwordError) {
-      return
+    try {
+      if (state.isLoading || state.emailError || state.passwordError) {
+        return
+      }
+      setState({ ...state, isLoading: true })
+      await authentication.auth({
+        email: state.email,
+        password: state.password
+      })
+    } catch (error) {
+      setState({ ...state, isLoading: false, mainError: error.message })
     }
-    setState({ ...state, isLoading: true })
-    await authentication.auth({ email: state.email, password: state.password })
   }
 
   return (
@@ -69,7 +76,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
           >
             Entrar
           </button>
-          <span className={Styles.link}>Criar conta</span>
+          <span className={Styles.link}>Create account</span>
           <FormStatus />
         </form>
       </Context.Provider>
