@@ -28,6 +28,7 @@
 * Dependency Injection
 * Abstract Server
 * Composition Root
+* Builder
 
 > ## Methodologies and Designs
 
